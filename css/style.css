@@ -1,0 +1,8 @@
+@font-face {
+    src: url("../fonts/Covert-Ops-Expanded/covertops.ttf");
+    font-family: covertops;
+}
+#name {
+    font-size: 70px;
+    font-family: covertops;
+}
