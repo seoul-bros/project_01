@@ -1,11 +1,61 @@
+/* $itemGrow: 1.2;
+$duration: 250ms; */
+/* 위에거 적용해야함 : 나는 불가 */
+
 @font-face {
     src: url("../fonts/Covert-Ops-Expanded/covertops.ttf");
     font-family: covertops;
 }
-.navbar-brand {
-    color: wheat;
+html{
+    scroll-behavior: smooth;
 }
-#name {
-    font-size: 70px;
+h1{
+    color: red;
+    text-align: center;
     font-family: covertops;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,100%);
+}
+section{
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    margin: 20px 0;
+}
+/* < 이 모양이 안나오고 > 만 나오는 상황 다른거 적용해도 동일 해결 요망 */
+a{
+    position: absolute;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 6em;
+    background: rgb(140, 27, 185);
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+section:nth-of-type(1){
+    top: 0; bottom: 0; left: 0;
+    background : linear-gradient(-90deg, rgba(0,0,0,0)0%, rgba(0,0,0,1)100%);
+}
+section:nth-of-type(2){
+    top: 0; bottom: 0; right: 0;
+    background : linear-gradient(90deg, rgba(0,0,0,0)0%, rgba(0,0,0,1)100%);
+}
+.item{
+    padding: 0 2px;
+    /* 동일 issue */
+    /* transition: $duration all; */
+}
+.item:hover{
+    margin: 0 40px;
+    transform: scale(1.2);
 }
